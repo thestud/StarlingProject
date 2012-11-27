@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectDescription>
+	<name>StarlingProject</name>
+	<comment></comment>
+	<projects>
+	</projects>
+	<buildSpec>
+		<buildCommand>
+			<name>com.adobe.flexbuilder.project.flexbuilder</name>
+			<arguments>
+			</arguments>
+		</buildCommand>
+	</buildSpec>
+	<natures>
+		<nature>com.adobe.flexbuilder.project.actionscriptnature</nature>
+	</natures>
+	<linkedResources>
+		<link>
+			<name>[source path] Hi-ReS-Stats-src</name>
+			<type>2</type>
+			<location>C:/Users/thestud/github/Hi-ReS-Stats/src</location>
+		</link>
+		<link>
+			<name>[source path] greensock-as3-src</name>
+			<type>2</type>
+			<location>C:/Users/thestud/code/greensock-as3/src</location>
+		</link>
+		<link>
+			<name>[source path] starling-src</name>
+			<type>2</type>
+			<location>C:/Users/thestud/code/PrimaryFeather-Starling-Framework-v1.2-0-g2a42a8e/PrimaryFeather-Starling-Framework-2a42a8e/starling/src</location>
+		</link>
+	</linkedResources>
+</projectDescription>
