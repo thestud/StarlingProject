@@ -2,12 +2,13 @@ package screens
 {
 	import com.greensock.TweenLite;
 	
+	import flash.events.MouseEvent;
+	
 	import starling.display.Button;
 	import starling.display.Image;
 	import starling.display.Sprite;
 	import starling.events.Event;
-	import starling.events.TouchEvent;
-	import starling.events.TouchPhase;
+	import starling.model.TempEventModel;
 	
 	
 	public class Welcome extends Sprite
@@ -21,11 +22,13 @@ package screens
 		private var playBtn:Button;
 		private var aboutBtn:Button;
 		
+		private var tempEventModel:TempEventModel = TempEventModel.getInstance(); 
+		
 		public function Welcome()
 		{
 			super();
 			this.addEventListener(Event.ADDED_TO_STAGE, onAddedToStage);
-			
+			//tempEventModel.addEventListener(MouseEvent.MOUSE_DOWN, onMouseDown); 
 		}
 		
 		private function onAddedToStage(event:Event):void
@@ -61,21 +64,37 @@ package screens
 			aboutBtn.y = 380; 
 			this.addChild(aboutBtn); 
 			
-			playBtn.addEventListener(TouchEvent.TOUCH, onPlayButton); 
+			
+			addEventListener(Event.TRIGGERED, onMainMenuClick);
+			
+			playBtn.addEventListener(Button.BUTTON_CLICK, onPlayBtnButtonClick); 
+			aboutBtn.addEventListener(Button.BUTTON_CLICK, onAboutBtnButtonClick); 
+
 						
 		}
 		
-		private function onPlayButton():void
+		private function onAboutBtnButtonClick():void
 		{
-			trace('hello'); 
+			trace('about button was clicked');
+		}
+		
+		private function onPlayBtnButtonClick():void
+		{
+			trace('play button was clicked'); 
 			
 		}
 		
 		private function onMainMenuClick(event:Event):void
 		{
-			trace(); 
+			trace('hello!'); 
 			trace(event.target as Button);
 			
+		}
+		
+		private function onMouseDown(event:MouseEvent):void
+		{
+			trace();
+			trace(event.relatedObject as Button);
 		}
 		
 		public function initialize():void

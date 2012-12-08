@@ -1,5 +1,7 @@
 package
 {
+	import flash.events.MouseEvent;
+	
 	import screens.Welcome;
 	
 	import starling.display.Sprite;
